@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 class TokenizerPool:
-    def __init__(self, model_name: str, initial_capacity: int = 50, min_capacity: int = 50,
+    def __init__(self, model_name: str, initial_capacity: int = 20, min_capacity: int = 50,
                  max_capacity: int = 150, idle_timeout: float = 300.0):
         self.tokenizer_class = AutoTokenizer
         self.model_name = model_name
