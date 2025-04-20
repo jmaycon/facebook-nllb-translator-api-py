@@ -89,7 +89,8 @@ def split_into_sentences(text: str):
     sentences = []
     for paragraph in segmenter.process(text):
         for sentence in paragraph:
-            sentences.append("".join(token.value for token in sentence))
+            sentence_text = "".join(token.spacing + token.value for token in sentence)
+            sentences.append(sentence_text)
     return sentences
 
 
@@ -135,7 +136,6 @@ def parallel_translate(text, tokenizer_pool, model, device, source_lang, target_
         results = [future.result()[0] for future in futures]
 
     return " ".join(results)
-
 
 
 # Translation wrapper
