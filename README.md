@@ -1,4 +1,4 @@
-# Marian Translator German ↔ English
+# Facebook NLLB Translator German ↔ English
 
 Simple REST API for German ↔ English translation using Facebook NLLB Model.
 
